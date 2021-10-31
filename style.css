@@ -136,6 +136,7 @@ h2 {
   background-size: cover;
   background-position: center;
   vertical-align: middle;
+  width: 100%;
 }
 
 /* hamburger menu */
@@ -148,24 +149,90 @@ h2 {
 /* ---------------------------------------------- Tablet -------------------------------------------------- */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .parent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 0.5fr) 0.1fr 0.5fr 0.1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-  }
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 0.6fr) 0.1fr 0.5fr 0.1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
 
-.drieblockimg{
-  width: 100%;
-}
-.foto {
-  width: 30%;
-}
+    .drieblock,
+    .drieblockimg {
+      display: grid;
+      grid-template-columns: 33.333% 33.333% 33.333%;
+    }
+    .foto {
+      align-self: stretch;
+    }
 
 }
 
 /* ---------------------------------------------- small desktop -------------------------------------------------- */
-@media only screen and (min-width: 769px) and (max-width: 1279px) {}
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+  .parent {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 0.8fr) 0.2fr 1fr 0.2fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+
+      .drieblock,
+      .drieblockimg {
+        display: grid;
+        grid-template-columns: 33.333% 33.333% 33.333%;
+      }
+      .foto {
+        align-self: stretch;
+      }
+
+      .drieblock_item {
+        padding: 16px;
+      }
+}
 
 /* ---------------------------------------------- big desktop -------------------------------------------------- */
-@media only screen and (min-width: 1280px) {}
+@media only screen and (min-width: 1280px) {
+  .parent {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 0.8fr) 0.2fr 1fr 0.2fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+
+  .drieblock{
+    display: grid;
+     grid-template-columns: 33.333% 33.333% 33.333%;
+     width: 100%;}
+
+  .drieblockimg{
+    display: grid;
+     grid-template-columns: 33.333% 33.333% 33.333%;
+     width: 100%;
+  }
+
+#logo{
+  width: 175px;
+  margin-left:  28px;
+    margin-top: 28px;
+}
+
+
+  h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px;s
+  }
+
+
+  h2 {
+    font-family: 'Bebas Neue', cursive;
+        font-size: 36px;
+  }
+
+  h3 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 600;
+    margin-bottom: -10px;
+  }
+}
