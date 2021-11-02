@@ -46,6 +46,11 @@ h3 {
   z-index: 1;
 }
 
+#logo {
+  width: 100px;
+  padding: 8px;
+}
+
 .hamburgermenu {
   grid-area: 1 / 3 / 2 / 4;
   padding: 24px 24px 16px 0px;
@@ -145,94 +150,209 @@ h2 {
   height: 80px;
 }
 
+.topnav {
+  display: none;
+}
+
 /* } */
 /* ---------------------------------------------- Tablet -------------------------------------------------- */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .parent {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 0.6fr) 0.1fr 0.5fr 0.1fr;
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
-    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 0.6fr) 0.1fr 0.5fr 0.1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
 
-    .drieblock,
-    .drieblockimg {
-      display: grid;
-      grid-template-columns: 33.333% 33.333% 33.333%;
-    }
-    .foto {
-      align-self: stretch;
-    }
+  .drieblock,
+  .drieblockimg {
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+  }
 
+  .foto {
+    align-self: stretch;
+  }
+
+  .drieblock_item {
+    font-size: 14px
+  }
 }
 
 /* ---------------------------------------------- small desktop -------------------------------------------------- */
 @media only screen and (min-width: 769px) and (max-width: 1279px) {
   .parent {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 0.8fr) 0.2fr 1fr 0.2fr;
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
-    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 0.8fr) 0.2fr 1fr 0.2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
 
-      .drieblock,
-      .drieblockimg {
-        display: grid;
-        grid-template-columns: 33.333% 33.333% 33.333%;
-      }
-      .foto {
-        align-self: stretch;
-      }
+  .drieblock,
+  .drieblockfooter,
+  .drieblockimg {
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+  }
 
-      .drieblock_item {
-        padding: 16px;
-      }
+  .foto {
+    align-self: stretch;
+  }
+
+  .drieblock_item {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  #footer {
+    align-self: center;
+  }
+
+  h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 36px;
+  }
+
+  h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+  }
+
+  h3 {
+    font-family: 'Cabin', sans-serif;
+    margin-bottom: -10px;
+  }
+
+  .hamburgermenu {
+    display: none !important;
+  }
+
+  .topnav {
+    grid-area: 1 / 3 / 2 / 4;
+    padding: 16px 16px 16px 0px;
+    /* height: fit-content; */
+    display: flex;
+    /* flex-direction: column; */
+    align-items: flex-end;
+    align-self: baseline;
+    /* font-size: 0.5rem; */
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); */
+    z-index: 1;
+  }
+
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  #highlight {
+    font-style: italic;
+    color: #CC985C;
+  }
+
+  .topnav a:hover {
+    background-color: #f2f2f2;
+    color: black;
+  }
+
+  .topnav a.active {
+    text-decoration: underline;
+  }
 }
 
 /* ---------------------------------------------- big desktop -------------------------------------------------- */
 @media only screen and (min-width: 1280px) {
   .parent {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 0.8fr) 0.2fr 1fr 0.2fr;
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
-    }
-
-  .drieblock{
     display: grid;
-     grid-template-columns: 33.333% 33.333% 33.333%;
-     width: 100%;}
-
-  .drieblockimg{
-    display: grid;
-     grid-template-columns: 33.333% 33.333% 33.333%;
-     width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 0.8fr) 0.2fr 0.7fr 0.2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 
-#logo{
-  width: 175px;
-  margin-left:  28px;
-    margin-top: 28px;
-}
+  .drieblock_item {
+    padding: 16px;
+  }
 
+  .drieblock,
+  .drieblockfooter,
+  .drieblockimg {
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+  }
+
+  #logo {
+    width: 175px;
+    margin-left: 16px;
+    margin-top: 16px;
+  }
 
   h1 {
     font-family: 'Bebas Neue', cursive;
-    font-size: 48px;s
+    font-size: 48px;
   }
-
 
   h2 {
     font-family: 'Bebas Neue', cursive;
-        font-size: 36px;
+    font-size: 36px;
+    margin-top: 10px;
   }
 
   h3 {
     font-family: 'Cabin', sans-serif;
-    font-weight: 600;
     margin-bottom: -10px;
+    v
+  }
+
+  .bannertijd {
+    font-size: 18px;
+  }
+
+  .hamburgermenu {
+    display: none !important;
+  }
+
+  .topnav {
+    grid-area: 1 / 3 / 2 / 4;
+    padding: 24px 24px 16px 0px;
+    /* height: fit-content; */
+    display: flex;
+    /* flex-direction: column; */
+    align-items: flex-end;
+    align-self: baseline;
+    /* font-size: 0.5rem; */
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); */
+    z-index: 1;
+  }
+
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 20px;
+  }
+
+  #highlight {
+    font-style: italic;
+    color: #CC985C;
+  }
+
+  .topnav a:hover {
+    background-color: #f2f2f2;
+    color: black;
+  }
+
+  .topnav a.active {
+    text-decoration: underline;
   }
 }
